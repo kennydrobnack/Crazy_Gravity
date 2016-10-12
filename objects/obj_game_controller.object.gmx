@@ -25,9 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.y_grav += 10;
+            <string>
+var i;
+for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+{
+   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i].gravity_direction = 270;
+   enemy[i].gravity = 10;
+}
 
-physics_world_gravity(global.x_grav, global.y_grav);
 </string>
           </argument>
         </arguments>
@@ -50,9 +56,15 @@ physics_world_gravity(global.x_grav, global.y_grav);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.x_grav += 10;
+            <string>
+var i;
+for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+{
+   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i].gravity_direction = 0;
+   enemy[i].gravity = 10;
+}
 
-physics_world_gravity(global.x_grav, global.y_grav);
 </string>
           </argument>
         </arguments>
@@ -75,9 +87,17 @@ physics_world_gravity(global.x_grav, global.y_grav);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.y_grav -= 10;
+            <string>
+var i;
+for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+{
+   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i].gravity_direction = 90;
+   enemy[i].gravity = 10;
+}
 
-physics_world_gravity(global.x_grav, global.y_grav);
+
+
 </string>
           </argument>
         </arguments>
@@ -100,9 +120,14 @@ physics_world_gravity(global.x_grav, global.y_grav);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.x_grav -= 10;
-
-physics_world_gravity(global.x_grav, global.y_grav);
+            <string>
+var i;
+for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+{
+   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i].gravity_direction = 180;
+   enemy[i].gravity = 10;
+}
 
 </string>
           </argument>
