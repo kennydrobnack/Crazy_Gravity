@@ -17,9 +17,11 @@
     <object>objects\obj_green_square</object>
     <object>objects\obj_game_controller</object>
     <object>objects\obj_orange_square</object>
+    <object>objects\obj_menu_item</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
+    <room>rooms\rm_game_over</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
