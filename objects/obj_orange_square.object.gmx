@@ -61,6 +61,29 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_angle = random_range(0, 360);
+
+spin_direction = round(random_range(1, 2));
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -88,6 +111,39 @@
           <argument>
             <kind>0</kind>
             <string>enemy_speed</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///rotate the enemy
+
+if (image_angle &gt;= 360 or image_angle &lt;= 0) {
+  image_angle = 0;
+}
+else {
+  if (spin_direction = 1) { 
+    image_angle = image_angle + 1;
+  }
+  else {
+    image_angle = image_angle - 1;
+  }
+}
+</string>
           </argument>
         </arguments>
       </action>
