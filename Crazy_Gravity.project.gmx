@@ -6,17 +6,18 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_green_square</sprite>
-    <sprite>sprites\spr_orange_square</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_orange_enemy</sprite>
+    <sprite>sprites\spr_heart</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_main</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\obj_green_square</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_game_controller</object>
-    <object>objects\obj_orange_square</object>
+    <object>objects\obj_orange_enemy</object>
     <object>objects\obj_menu_item</object>
   </objects>
   <rooms name="rooms">
@@ -26,4 +27,9 @@
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <TutorialState>
+    <IsTutorial>0</IsTutorial>
+    <TutorialName></TutorialName>
+    <TutorialPage>0</TutorialPage>
+  </TutorialState>
 </assets>

@@ -4,10 +4,52 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>701</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_score</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>711</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_life</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>3</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="5" enumb="40">
       <action>
         <libid>1</libid>
@@ -27,9 +69,9 @@
             <kind>1</kind>
             <string>
 var i;
-for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+for (i = 0; i &lt; instance_number(obj_orange_enemy); i += 1)
 {
-   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i] = instance_find(obj_orange_enemy,i);
    enemy[i].gravity_direction = 270;
    enemy[i].gravity = 10;
 }
@@ -58,9 +100,9 @@ for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
             <kind>1</kind>
             <string>
 var i;
-for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+for (i = 0; i &lt; instance_number(obj_orange_enemy); i += 1)
 {
-   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i] = instance_find(obj_orange_enemy,i);
    enemy[i].gravity_direction = 0;
    enemy[i].gravity = 10;
 }
@@ -89,9 +131,9 @@ for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
             <kind>1</kind>
             <string>
 var i;
-for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+for (i = 0; i &lt; instance_number(obj_orange_enemy); i += 1)
 {
-   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i] = instance_find(obj_orange_enemy,i);
    enemy[i].gravity_direction = 90;
    enemy[i].gravity = 10;
 }
@@ -122,14 +164,72 @@ for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
             <kind>1</kind>
             <string>
 var i;
-for (i = 0; i &lt; instance_number(obj_orange_square); i += 1)
+for (i = 0; i &lt; instance_number(obj_orange_enemy); i += 1)
 {
-   enemy[i] = instance_find(obj_orange_square,i);
+   enemy[i] = instance_find(obj_orange_enemy,i);
    enemy[i].gravity_direction = 180;
    enemy[i].gravity = 10;
 }
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>703</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_score</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>200</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>20</string>
+          </argument>
+          <argument>
+            <kind>1</kind>
+            <string>Score: </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>714</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_life_images</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>500</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>20</string>
+          </argument>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_heart</sprite>
           </argument>
         </arguments>
       </action>
