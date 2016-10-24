@@ -13,6 +13,12 @@
   <code>global.x_grav = 0;
 global.y_grav = 10;
 
+start_enemies = 4;
+
+for (i = 0; i &lt; start_enemies; i++) {
+  instance_create(random(1024), random(768), obj_orange_enemy);
+}
+
 //physics_world_gravity(global.x_grav, global.y_grav);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -56,10 +62,6 @@ global.y_grav = 10;
   <instances>
     <instance objName="obj_player" x="352" y="256" name="inst_DEA137DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_controller" x="32" y="32" name="inst_D1CB8071" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_orange_enemy" x="96" y="96" name="inst_2BCE64AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_orange_enemy" x="608" y="64" name="inst_8B7EEED6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_orange_enemy" x="608" y="384" name="inst_D25A8F32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_orange_enemy" x="128" y="352" name="inst_055A9A70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
