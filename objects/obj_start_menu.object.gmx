@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>2</kind>
-            <string>Game Over! Click button to continue</string>
+            <string>Enter your name:</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -37,30 +37,6 @@
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="6" enumb="53">
-      <action>
-        <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>11</kind>
-            <room>rm_main</room>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,10 +53,51 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///draw game over screen
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_text(400, 20, "Game over! # Click mouse button to try again");
+            <string>///get player name
+global.Name = "Unnamed player";
+msg = get_string_async("What's your name?","Anon");
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="63">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///get player name
+var i_d = ds_map_find_value(async_load, "id");
+if i_d == msg
+   {
+   if ds_map_find_value(async_load, "status")
+      {
+      if ds_map_find_value(async_load, "result") != ""
+         {
+         global.Name = ds_map_find_value(async_load, "result");
+         }
+      }
+   }
+   
+   
+   if (global.Name != "Unnamed player") {
+    room_goto_next();
+}
 </string>
           </argument>
         </arguments>
