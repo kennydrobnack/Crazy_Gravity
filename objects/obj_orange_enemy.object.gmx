@@ -183,9 +183,32 @@ else {
 if instance_count &lt; 20  {
     num = random_range(0, 3);
     for (i = 0; i &lt;= num; i++) {
-        inst = instance_create(random(1024), random(768), obj_orange_enemy);
+        edge = round(random_range(0,4));
+        if (edge == 0) { // left
+            spawn_at_x = 0;
+            spawn_at_y = random(window_get_height());
+        } else if (edge = 1) { // up
+            spawn_at_y = 0;
+            spawn_at_x = random(window_get_width());
+        } else if (edge = 2) { //right
+            spawn_at_x = window_get_width();
+            spawn_at_y = random(window_get_height());
+        }
+        else { //down
+            spawn_at_x = random(window_get_width());
+            spawn_at_y = window_get_height();
+        }
+        inst = instance_create(
+            spawn_at_x,
+            spawn_at_y, obj_orange_enemy);
+        //random valume between 1 &amp; 4
+        // switch/case 1 = left, 2= right 3 = top 4 = bottom
     }
 }
+
+//function spawn_on_edge(which_edge, percent_range, spawn_object) {
+
+//}
 </string>
           </argument>
         </arguments>
